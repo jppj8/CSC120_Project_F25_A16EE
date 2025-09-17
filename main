@@ -1,0 +1,6 @@
+game_name = "Chef!" # TODO, name your game project Python
+print("Welcome",game_name)
+print("=============")
+print("Are you ready to cook!") # TODO, print greetings with game name
+name = input("Before we start cooking what is your name?")
+print(f"Let's cook some food Chef!",name)
