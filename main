@@ -1,6 +1,28 @@
+# main.py
+import random
 game_name = "Chef!" # TODO, name your game project Python
 print("Welcome",game_name)
 print("=============")
 print("Are you ready to cook!") # TODO, print greetings with game name
 name = input("Before we start cooking what is your name?")
-print(f"Let's cook some food Chef "+ name + "!")
+print(f"Let's cook some food Chef " + name + "!")
+# 2.2 Dictionary for player stats
+player = {
+    "name": name,
+    "wealth": 100,
+    "cooking skills": 0
+}
+
+# 2.3 Random events
+events = ["learn a new skills", "meet a contender", "do nothing chill relax"]
+event = random.choice(events)
+print(f"While cooking, you {event}!")
+
+# 2.4 Update character stats
+if event == "learn a new skills":
+    player["cooking skills"] += 1
+    print(f"{player['name']} learned a new skill, you now have {player['cooking skills']} skills!.")
+elif event == "meet a contender":
+    player["wealth"] -= 10
+    print(f"{player['name']} got beaten during cook off with another chef, wealth is now {player['wealth']}.")
+# if event is "do nothing chill relax", nothing happens
